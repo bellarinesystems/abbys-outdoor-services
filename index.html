@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abbys Outdoor Services — professional landscaping in Charlemont & Geelong. Punctual, detailed, and trusted by local homeowners. Call 0451 176 585.">
+<title>Abbys Outdoor Services | Professional Landscaping Charlemont & Geelong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --blue-900: #0c2340;
+  --blue-700: #1a4175;
+  --blue-600: #1e5095;
+  --blue-500: #2563b0;
+  --blue-400: #3b82d6;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+  --warm-grey-100: #f5f3f0;
+  --warm-grey-200: #e8e4df;
+  --warm-grey-300: #d1cbc3;
+  --warm-grey-600: #6b6560;
+  --warm-grey-800: #3d3832;
+  --white: #ffffff;
+  --green-accent: #16a34a;
+  --shadow-sm: 0 1px 3px rgba(12,35,64,0.08);
+  --shadow-md: 0 4px 16px rgba(12,35,64,0.1);
+  --shadow-lg: 0 8px 32px rgba(12,35,64,0.14);
+  --shadow-xl: 0 16px 48px rgba(12,35,64,0.18);
+  --radius: 12px;
+  --radius-lg: 20px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--warm-grey-800);
+  line-height: 1.7;
+  overflow-x: hidden;
+  background: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.2;
+  color: var(--blue-900);
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--warm-grey-200);
+  transition: box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--blue-900);
+}
+
+.nav-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--warm-grey-600);
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--blue-600);
+  background: var(--blue-50);
+}
+
+.nav-cta-btn {
+  background: var(--blue-600) !important;
+  color: var(--white) !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s !important;
+}
+
+.nav-cta-btn:hover {
+  background: var(--blue-700) !important;
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 8px;
+  border: none;
+  background: none;
+  min-width: 48px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--blue-900);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-nav {
+  display: none;
+  background: var(--white);
+  border-bottom: 1px solid var(--warm-grey-200);
+  padding: 16px 24px 24px;
+}
+
+.mobile-nav.open {
+  display: block;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 14px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--warm-grey-800);
+  border-bottom: 1px solid var(--warm-grey-100);
+}
+
+.mobile-nav a:last-child {
+  border: none;
+  margin-top: 8px;
+  background: var(--blue-600);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(160deg, var(--blue-900) 0%, var(--blue-700) 40%, var(--blue-500) 100%);
+  overflow: hidden;
+}
+
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-pattern svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-shape-1 {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,214,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-shape-2 {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-shape-3 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+  animation: hero-float 8s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, -30px) rotate(5deg); }
+}
+
+.hero-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hero-content {
+  color: var(--white);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-badge i {
+  color: #fbbf24;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.hero p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 36px;
+  max-width: 540px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  color: var(--blue-700);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-height: 48px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+  min-height: 48px;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-illustration {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.hero-card {
+  position: absolute;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  color: white;
+}
+
+.hero-card-1 {
+  top: 10%;
+  left: 5%;
+  width: 220px;
+  animation: card-float-1 6s ease-in-out infinite;
+}
+
+.hero-card-2 {
+  bottom: 15%;
+  right: 5%;
+  width: 200px;
+  animation: card-float-2 7s ease-in-out infinite;
+}
+
+.hero-card-3 {
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  animation: card-float-3 5s ease-in-out infinite;
+  background: rgba(255,255,255,0.15);
+}
+
+@keyframes card-float-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+@keyframes card-float-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes card-float-3 {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-12px); }
+}
+
+.hero-card .card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.hero-card .card-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.hero-card .card-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ===== SECTION STYLES ===== */
+.section {
+  padding: 100px 0;
+}
+
+.section-alt {
+  background: var(--warm-grey-100);
+}
+
+.section-blue {
+  background: var(--blue-50);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--blue-600);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.section-tag::before,
+.section-tag::after {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--blue-400);
+  border-radius: 2px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  color: var(--warm-grey-600);
+  font-size: 1.05rem;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.about-text p {
+  color: var(--warm-grey-600);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+
+.about-text .highlight-bar {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  border: 1px solid var(--warm-grey-200);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-100);
+}
+
+.stat-card .stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--blue-600);
+  margin-bottom: 4px;
+}
+
+.stat-card .stat-label {
+  font-size: 0.95rem;
+  color: var(--warm-grey-600);
+  font-weight: 500;
+}
+
+/* ===== SERVICES ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  border: 1px solid var(--warm-grey-200);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-100);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--blue-50);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--blue-600);
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.service-card:hover .service-icon {
+  background: var(--blue-600);
+  color: var(--white);
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--blue-900);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--warm-grey-600);
+  line-height: 1.7;
+}
+
+/* ===== SELLING POINTS ===== */
+.selling-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.selling-card {
+  display: flex;
+  gap: 20px;
+  padding: 32px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--warm-grey-200);
+  transition: all 0.3s;
+}
+
+.selling-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--blue-100);
+}
+
+.selling-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.selling-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.selling-card p {
+  font-size: 0.95rem;
+  color: var(--warm-grey-600);
+  line-height: 1.7;
+}
+
+/* ===== PROCESS ===== */
+.process-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-line {
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--blue-400), var(--blue-100));
+  border-radius: 3px;
+}
+
+.process-step {
+  position: relative;
+  padding-left: 88px;
+  padding-bottom: 48px;
+}
+
+.process-step:last-child {
+  padding-bottom: 0;
+}
+
+.process-number {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37,99,176,0.3);
+  z-index: 2;
+}
+
+.process-step h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-top: 2px;
+}
+
+.process-step p {
+  color: var(--warm-grey-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--warm-grey-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.faq-item.active {
+  border-color: var(--blue-400);
+  box-shadow: 0 2px 12px rgba(37,99,176,0.1);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--blue-900);
+  text-align: left;
+  line-height: 1.4;
+  min-height: 48px;
+}
+
+.faq-question i {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: var(--blue-500);
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+  color: var(--warm-grey-600);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section {
+  background: linear-gradient(160deg, var(--blue-900), var(--blue-700));
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 50%);
+}
+
+.testimonials-section .section-header h2 {
+  color: white;
+}
+
+.testimonials-section .section-header p {
+  color: rgba(255,255,255,0.7);
+}
+
+.testimonials-section .section-tag {
+  color: var(--blue-100);
+}
+
+.testimonials-section .section-tag::before,
+.testimonials-section .section-tag::after {
+  background: rgba(255,255,255,0.3);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.testimonial-card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-4px);
+}
+
+.testimonial-stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 2px;
+}
+
+.testimonial-card blockquote {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ===== HOURS & LOCATION ===== */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.hours-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--warm-grey-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.hours-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hours-card h3 i {
+  color: var(--blue-500);
+}
+
+.hours-list {
+  list-style: none;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--warm-grey-100);
+  font-size: 0.95rem;
+}
+
+.hours-list li:last-child {
+  border: none;
+}
+
+.hours-list .day {
+  font-weight: 600;
+  color: var(--blue-900);
+}
+
+.hours-list .time {
+  color: var(--warm-grey-600);
+}
+
+.map-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--warm-grey-200);
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 4/3;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 20px 40px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(37,99,176,0.35);
+  min-height: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37,99,176,0.45);
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-detail-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--blue-50);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-600);
+  font-size: 1.1rem;
+}
+
+.contact-detail h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--warm-grey-600);
+  margin-bottom: 2px;
+}
+
+.contact-detail p, .contact-detail a {
+  font-size: 1rem;
+  color: var(--blue-900);
+  font-weight: 500;
+}
+
+.contact-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--warm-grey-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--blue-900);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--warm-grey-200);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--warm-grey-800);
+  transition: all 0.3s;
+  background: var(--warm-grey-100);
+  min-height: 48px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-500);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(37,99,176,0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 14px 28px;
+  background: var(--blue-600);
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-height: 48px;
+}
+
+.form-submit:hover {
+  background: var(--blue-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--blue-900);
+  color: rgba(255,255,255,0.7);
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand .nav-logo {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  transition: all 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 4px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.footer-contact-item i {
+  color: var(--blue-400);
+  width: 20px;
+  text-align: center;
+}
+
+.footer-bottom {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .hero { min-height: auto; padding: 40px 0; }
+  
+  .hero-visual { display: none; }
+  
+  .hero-buttons { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .stats-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .stat-card {
+    flex: 1;
+    min-width: 140px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .selling-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .section { padding: 64px 0; }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    flex-direction: column;
+  }
+  
+  .stat-card { min-width: auto; }
+  
+  .hero h1 { font-size: 1.75rem; }
+  
+  .section-header h2 { font-size: 1.5rem; }
+  
+  .service-card { padding: 24px 20px; }
+  
+  .selling-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .process-step { padding-left: 72px; }
+  .process-line { left: 24px; }
+  .process-number {
+    left: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-cta-btn { font-size: 1.05rem; padding: 18px 24px; }
+  
+  .hours-card { padding: 24px; }
+  .contact-form { padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon"><i class="fas fa-leaf"></i></div>
+      Abbys Outdoor Services
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta-btn">Call Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Call Now — 0451 176 585</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-pattern">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-shape-1"></div>
+    <div class="hero-shape-2"></div>
+    <div class="hero-shape-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        Trusted Across Geelong &amp; Charlemont
+      </div>
+      <h1>Transform Your Outdoor Space Into Something You'll Actually Love Coming Home To</h1>
+      <p>Abbys Outdoor Services delivers professional landscaping and outdoor transformations for homeowners across Charlemont, Armstrong Creek, and the greater Geelong region. Punctual, detailed, and built to last.</p>
+      <div class="hero-buttons">
+        <a href="tel:0451176585" class="btn-primary">
+          <i class="fas fa-phone"></i> Call Abby Now — 0451 176 585
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <i class="fas fa-envelope"></i> Get a Free Quote
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-illustration">
+        <div class="hero-card hero-card-1">
+          <div class="card-icon"><i class="fas fa-star"></i></div>
+          <div class="card-number">5★</div>
+          <div class="card-label">Customer Rating</div>
+        </div>
+        <div class="hero-card hero-card-3">
+          <div class="card-icon"><i class="fas fa-check"></i></div>
+          <div class="card-number">50+</div>
+          <div class="card-label">Yards Transformed</div>
+        </div>
+        <div class="hero-card hero-card-2">
+          <div class="card-icon"><i class="fas fa-clock"></i></div>
+          <div class="card-number">100%</div>
+          <div class="card-label">On-Time Completion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-tag">
+          <span></span>About Us<span></span>
+        </div>
+        <h2>The Team Behind Your Backyard Transformation</h2>
+        <div class="highlight-bar"></div>
+        <p>Run by Achyut (Abby), Abbys Outdoor Services is a hands-on landscaping and outdoor contracting team based right here in Charlemont. We take genuine pride in every project — whether it's a full backyard makeover or tidying up your front yard to boost your street appeal.</p>
+        <p>Our clients regularly mention our attention to detail and the fact that we actually show up when we say we will (we know that shouldn't be rare, but here we are). From new estates in Armstrong Creek to established homes across Geelong, we treat every property like it's our own.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">5★</div>
+          <div class="stat-label">Customer Rating</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">On-Time Completion</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Yards Transformed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Services</div>
+      <h2>Everything Your Outdoor Space Needs</h2>
+      <p>From full backyard makeovers to detailed garden work — we've got you covered.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-star"></i></div>
+        <h3>Full Backyard Landscaping</h3>
+        <p>Complete backyard transformations from bare dirt to beautiful outdoor living spaces. We handle design, earthworks, planting, and finishing touches so you get a space that actually works for your lifestyle.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-location-dot"></i></div>
+        <h3>Front Yard &amp; Streetscape Design</h3>
+        <p>First impressions matter, especially in newer estates around Charlemont and Armstrong Creek. We create front yard designs that complement your home's style and stand out on the street.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-star"></i></div>
+        <h3>Garden Bed Installation &amp; Planting</h3>
+        <p>From native Australian plants suited to Geelong's climate to structured garden beds with proper drainage and edging. We select plants that thrive locally and keep maintenance manageable year-round.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-clock"></i></div>
+        <h3>Turf Installation &amp; Lawn Prep</h3>
+        <p>Proper soil preparation, grading, and quality turf supply and installation for lawns that establish quickly. We make sure your new lawn is set up to handle Geelong's dry summers and wet winters.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-star"></i></div>
+        <h3>Outdoor Structures &amp; Hardscaping</h3>
+        <p>Retaining walls, paving, garden edging, and other hardscape features that give your yard structure and function. Built to Australian standards with materials suited to local conditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="section" id="why-us">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Why Choose Us</div>
+      <h2>What Sets Us Apart From the Rest</h2>
+      <p>It's the basics done exceptionally well — that's what our clients value most.</p>
+    </div>
+    <div class="selling-grid">
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-clock"></i></div>
+        <div>
+          <h3>We Actually Show Up On Time</h3>
+          <p>Every single one of our clients mentions the same thing — we're punctual and we finish when we say we will. No chasing up, no guessing games, no wasted weekends waiting around.</p>
+        </div>
+      </div>
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div>
+          <h3>Obsessive Attention to Detail</h3>
+          <p>Clean edges, proper levels, thoughtful plant placement — it's the small things that separate a good job from a great one. We don't cut corners because we know you'll notice (and so will your neighbours).</p>
+        </div>
+      </div>
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div>
+          <h3>Local to Charlemont &amp; Geelong</h3>
+          <p>We live and work in the same area as our clients, so we understand the local soil, climate, and what grows well here. Being local also means we're nearby if you ever need us after the job's done.</p>
+        </div>
+      </div>
+      <div class="selling-card">
+        <div class="selling-icon"><i class="fa-solid fa-comments"></i></div>
+        <div>
+          <h3>Clear Communication, No Surprises</h3>
+          <p>You'll know exactly what's happening, when it's happening, and what it'll cost before we start. We keep things straightforward because nobody likes unexpected bills or scope creep.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="section section-blue" id="process">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">How It Works</div>
+      <h2>From First Call to Finished Yard</h2>
+      <p>A straightforward process designed to make your life easy.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-line"></div>
+      <div class="process-step">
+        <div class="process-number">1</div>
+        <h3>Get in Touch</h3>
+        <p>Give Abby a call or send a message — we'll have a quick chat about what you're looking for and organise a time to come see your property.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">2</div>
+        <h3>On-Site Consultation</h3>
+        <p>We visit your home, assess the space, discuss your ideas and budget, and put together a clear plan and quote with no hidden costs.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">3</div>
+        <h3>The Transformation Begins</h3>
+        <p>Once you're happy with the plan, we lock in a start date and get to work — turning up on time and keeping you updated throughout the project.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-number">4</div>
+        <h3>Final Walkthrough &amp; Handover</h3>
+        <p>We walk through the finished space with you to make sure every detail meets your expectations before we pack up and leave your yard looking incredible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">FAQ</div>
+      <h2>Common Questions, Straight Answers</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          What areas do you service around Geelong?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          We're based in Charlemont and service the wider Geelong region including Armstrong Creek, Grovedale, Waurn Ponds, Highton, Belmont, and surrounding suburbs. If you're unsure whether we cover your area, just give us a call and we'll let you know straight away.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          How much does landscaping cost?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Every yard is different, so pricing depends on the size of the space, the scope of work, and the materials involved. We provide a detailed, transparent quote after our on-site consultation so there are no surprises. We're happy to work within a range of budgets.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does a typical landscaping project take?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Smaller jobs like garden beds or turf installation can often be completed in a day or two. Larger backyard transformations typically take between one and two weeks depending on complexity. We'll give you a clear timeline upfront and we're known for sticking to it.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Do I need a permit for landscaping work?
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          Most standard landscaping work doesn't require a permit, but certain structures like retaining walls over a specific height may need approval from the City of Greater Geelong. We'll let you know during the quoting process if any permits are required and can help guide you through the process.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials-section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Testimonials</div>
+      <h2>What Our Clients Say After the Transformation</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <blockquote>"My yard never look beautiful like this. Very professional, on time, and great attention to detail. Highly recommended."</blockquote>
+        <div class="testimonial-author">— Jeevan Kharel</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <blockquote>"Very happy with the landscaping service. Achyut was professional, punctual, and paid great attention to detail. The work was completed on time. Highly recommend."</blockquote>
+        <div class="testimonial-author">— Rajeswari Ponna</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <blockquote>"Abby was punctual on time did really great job. My backyard looks amazing. Highly recommended."</blockquote>
+        <div class="testimonial-author">— Danish Rijal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS & LOCATION ===== -->
+<section class="section section-alt" id="location">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Find Us</div>
+      <h2>Hours &amp; Location</h2>
+      <p>Based in Charlemont, servicing the greater Geelong region.</p>
+    </div>
+    <div class="location-grid">
+      <div class="hours-card">
+        <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Tuesday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Wednesday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Thursday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Friday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Saturday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+          <li><span class="day">Sunday</span><span class="time">9:00 AM – 5:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.5!2d144.35!3d-38.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad4159e8b88bfcf%3A0x5045675218ce6e0!2sCharlemont%20VIC%203217!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Abbys Outdoor Services location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Get in Touch</div>
+      <h2>Ready to Transform Your Yard?</h2>
+      <p>Give Abby a call or send us a message — we'd love to hear about your project.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="tel:0451176585" class="contact-cta-btn">
+          <i class="fas fa-phone"></i> Call Abby Now — 0451 176 585
+        </a>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-location-dot"></i></div>
+          <div>
+            <h4>Address</h4>
+            <p>Flannery Cct, Charlemont VIC 3217, Australia</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:0451176585">0451 176 585</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <h4>Hours</h4>
+            <p>Monday – Sunday: 9:00 AM – 5:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="mailto:info@abbysoutdoorservices.com.au" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Jane Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="e.g. jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 0412 345 678">
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project</label>
+            <textarea id="message" name="message" required placeholder="What are you looking to have done?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Get a Free Quote</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="nav-logo-icon"><i class="fas fa-leaf"></i></div>
+          Abbys Outdoor Services
+        </div>
+        <p>Professional landscaping and outdoor transformations for homeowners across Charlemont, Armstrong Creek, and the greater Geelong region. Punctual, detailed, and built to last.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Details</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:0451176585">0451 176 585</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-location-dot"></i>
+          <span>Flannery Cct, Charlemont VIC 3217</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon – Sun: 9:00 AM – 5:00 PM</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Abbys Outdoor Services. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', function() {
+  this.classList.toggle('active');
+  mobileNav.classList.toggle('open');
+});
+
+// Close mobile nav when link clicked
+const mobileLinks = mobileNav.querySelectorAll('a');
+mobileLinks.forEach(function(link) {
+  link.addEventListener('click', function() {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('open');
+  });
+});
+
+// FAQ accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(function(item) {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', function() {
+    const isActive = item.classList.contains('active');
+    // Close all
+    faqItems.forEach(function(faq) {
+      faq.classList.remove('active');
+    });
+    // Open clicked if wasn't active
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+// Navbar shadow on scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+</body>
+</html>
